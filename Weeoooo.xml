@@ -2,30 +2,48 @@
   <block type="comment_comment" id="1" x="33" y="7">
     <field name="TEXT">Recognize Help</field>
     <next>
-      <block type="oled_drawtext" id="15">
-        <field name="TEXT">I'm on my way</field>
+      <block type="oled_cleardisplay" id="24">
         <next>
-          <block type="controls_repeat" id="2" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="3">
-                <field name="NUM">3</field>
+          <block type="oled_setcursor" id="42" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="49">
+                <field name="NUM">10</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="led_select" id="4" inline="true">
-                <field name="ACTION">FLASH</field>
-                <value name="LED">
-                  <block type="math_number" id="5">
-                    <field name="NUM">2</field>
-                  </block>
-                </value>
+            <value name="STARTY">
+              <block type="math_number" id="56">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawtext" id="15">
+                <field name="TEXT">I'm on my way</field>
                 <next>
-                  <block type="oled_color" id="6">
-                    <field name="OBJECT">GREEN</field>
+                  <block type="controls_repeat" id="2" inline="true">
+                    <value name="TIMES">
+                      <block type="math_number" id="3">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="led_select" id="4" inline="true">
+                        <field name="ACTION">FLASH</field>
+                        <value name="LED">
+                          <block type="math_number" id="5">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_color" id="6">
+                            <field name="OBJECT">GREEN</field>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
