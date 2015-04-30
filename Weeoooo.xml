@@ -201,11 +201,11 @@
               </block>
             </value>
             <next>
-              <block type="oled_drawtext" id="338">
-                <field name="TEXT">I'm here to help!!:)</field>
+              <block type="oled_linerect" id="577">
+                <field name="OBJECT">LINE</field>
                 <next>
-                  <block type="oled_linerect" id="577">
-                    <field name="OBJECT">LINE</field>
+                  <block type="oled_drawtext" id="338">
+                    <field name="TEXT">I'm here to help!!:)</field>
                     <next>
                       <block type="controls_repeat" id="353" inline="true">
                         <value name="TIMES">
