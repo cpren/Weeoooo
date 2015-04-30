@@ -16,11 +16,11 @@
               </block>
             </value>
             <next>
-              <block type="oled_drawtext" id="15">
-                <field name="TEXT">I'm on my way!!</field>
+              <block type="oled_linerect" id="531">
+                <field name="OBJECT">RECT</field>
                 <next>
-                  <block type="oled_linerect" id="531">
-                    <field name="OBJECT">RECT</field>
+                  <block type="oled_drawtext" id="15">
+                    <field name="TEXT">I'm on my way!!</field>
                     <next>
                       <block type="controls_repeat" id="2" inline="true">
                         <value name="TIMES">
@@ -123,7 +123,7 @@
               <block type="movement_leftmotor" id="177" inline="true">
                 <value name="MOVLEFT">
                   <block type="math_number" id="184">
-                    <field name="NUM">8</field>
+                    <field name="NUM">10</field>
                   </block>
                 </value>
                 <next>
