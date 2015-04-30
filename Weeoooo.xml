@@ -2,37 +2,34 @@
   <block type="comment_comment" id="2" x="33" y="7">
     <field name="TEXT">Recognize Help</field>
     <next>
-      <block type="oled_cleardisplay" id="59">
+      <block type="oled_drawtext" id="68">
+        <field name="TEXT">I'm on my way!!!</field>
         <next>
-          <block type="oled_drawtext" id="68">
-            <field name="TEXT">I'm on my way!!!</field>
-            <next>
-              <block type="controls_repeat" id="121" inline="true">
-                <value name="TIMES">
-                  <block type="math_number" id="199">
-                    <field name="NUM">3</field>
+          <block type="controls_repeat" id="121" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="199">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="led_select" id="192" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="206">
+                    <field name="NUM">2</field>
                   </block>
                 </value>
-                <statement name="DO">
-                  <block type="led_select" id="192" inline="true">
-                    <field name="ACTION">FLASH</field>
-                    <value name="LED">
-                      <block type="math_number" id="206">
-                        <field name="NUM">2</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="oled_color" id="177">
-                        <field name="OBJECT">GREEN</field>
-                      </block>
-                    </next>
+                <next>
+                  <block type="oled_color" id="177">
+                    <field name="OBJECT">GREEN</field>
                   </block>
-                </statement>
+                </next>
               </block>
-            </next>
+            </statement>
           </block>
         </next>
       </block>
     </next>
   </block>
+  <block type="oled_cleardisplay" id="59" x="53" y="183"></block>
 </xml>
