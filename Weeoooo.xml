@@ -31,5 +31,4 @@
       </block>
     </next>
   </block>
-  <block type="oled_cleardisplay" id="59" x="53" y="183"></block>
 </xml>
